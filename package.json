@@ -1,0 +1,25 @@
+{
+  "name": "metalamp-lesson-2",
+  "version": "1.0.0",
+  "description": "Site layout.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/zybrik0007/metalamp-lesson-2.git"
+  },
+  "keywords": [
+    "webpack",
+    "pug",
+    "saas",
+    "jQuery"
+  ],
+  "author": "alex",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/zybrik0007/metalamp-lesson-2/issues"
+  },
+  "homepage": "https://github.com/zybrik0007/metalamp-lesson-2#readme"
+}
