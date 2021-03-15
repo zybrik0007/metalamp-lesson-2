@@ -4,7 +4,8 @@
   "description": "Site layout.",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "build": "NODE_ENV=production webpack --mode production",
+    "start": "NODE_ENV=development webpack --mode development"
   },
   "repository": {
     "type": "git",
@@ -21,5 +22,9 @@
   "bugs": {
     "url": "https://github.com/zybrik0007/metalamp-lesson-2/issues"
   },
-  "homepage": "https://github.com/zybrik0007/metalamp-lesson-2#readme"
+  "homepage": "https://github.com/zybrik0007/metalamp-lesson-2#readme",
+  "devDependencies": {
+    "webpack": "^5.25.1",
+    "webpack-cli": "^4.5.0"
+  }
 }
