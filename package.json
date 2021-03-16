@@ -4,8 +4,8 @@
   "description": "Site layout.",
   "main": "index.js",
   "scripts": {
-    "dev": "NODE_ENV=production webpack --mode production",
-    "start": "NODE_ENV=development webpack --mode development"
+    "build": "NODE_ENV=production webpack --mode production",
+    "dev": "NODE_ENV=development webpack --mode development"
   },
   "repository": {
     "type": "git",

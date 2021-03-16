@@ -25,6 +25,7 @@ module.exports = {
     plugins: [
         new HtmlWebpackPlugin({
             template: path.resolve(__dirname, '../src/constructor/pages/ui-kit/ColorsType/ColorsType.pug'),
+            chunks: ['ColorsType'],
             filename: 'ColorsType.html'
         }),
         new HtmlWebpackPugPlugin()
