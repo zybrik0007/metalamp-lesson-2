@@ -4,7 +4,7 @@
   "description": "Site layout.",
   "main": "index.js",
   "scripts": {
-    "build": "NODE_ENV=production webpack --mode production",
+    "dev": "NODE_ENV=production webpack --mode production",
     "start": "NODE_ENV=development webpack --mode development"
   },
   "repository": {
@@ -24,6 +24,8 @@
   },
   "homepage": "https://github.com/zybrik0007/metalamp-lesson-2#readme",
   "devDependencies": {
+    "html-webpack-plugin": "^5.3.1",
+    "html-webpack-pug-plugin": "^2.0.1",
     "webpack": "^5.25.1",
     "webpack-cli": "^4.5.0"
   }
