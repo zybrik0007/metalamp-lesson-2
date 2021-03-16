@@ -1,9 +1,13 @@
 const path = require('path')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin')
+const {CleanWebpackPlugin} = require('clean-webpack-plugin')
+const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+
+
 module.exports = {
     entry: {
-        ColorsType: path.resolve(__dirname, '../src/constructor/pages/ui-kit/ColorsType/ColorsType.js')
+        ColorsType: path.resolve(__dirname, '../src/constructor/pages/ui-kit/colors-type/colors-type.js')
     },
     output: {
         path: path.join(__dirname, '../build'),
@@ -19,15 +23,22 @@ module.exports = {
                         pretty: true
                     }
                 }]
-            }
+            },
+            {
+                test: /\.scss$/,
+                use: [MiniCssExtractPlugin.loader, 'css-loader', 'sass-loader']
+            },
         ]
     },
     plugins: [
         new HtmlWebpackPlugin({
-            template: path.resolve(__dirname, '../src/constructor/pages/ui-kit/ColorsType/ColorsType.pug'),
+            template: path.resolve(__dirname, '../src/constructor/pages/ui-kit/colors-type/colors-type.pug'),
             chunks: ['ColorsType'],
-            filename: 'ColorsType.html'
+            filename: 'colors-type.html'
         }),
-        new HtmlWebpackPugPlugin()
+        new CleanWebpackPlugin(),
+        new MiniCssExtractPlugin({
+            filename: './css/[name].css'
+        }),
     ]
 }
