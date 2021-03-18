@@ -1,0 +1,57 @@
+@import '../../../assets/styles/colors.scss';
+.color {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  margin-top: 20px;
+  align-items: center;
+}
+.color__square {
+  width: 70px;
+  height: 70px;
+  display: flex;
+  flex-direction: column;
+  border-radius: 6px;
+}
+.color__square_background-Dark-Shade100 {
+  background: $Dark-Shade100;
+}
+.color__square_background-Dark-Shade75 {
+  background: $Dark-Shade75;
+}
+.color__square_background-Dark-Shade50 {
+  background: $Dark-Shade50;
+}
+.color__square_background-Dark-Shade50 {
+  background: $Dark-Shade50;
+}
+.color__square_background-Dark-Shade25 {
+  background: $Dark-Shade25;
+}
+.color__square_background-Dark-Shade5 {
+  background: $Dark-Shade5;
+}
+.color__square_background-Purple {
+  background: $Purple;
+}
+.color__square_background-Green {
+  background: $Green;
+}
+
+.color__text {
+  display: flex;
+  flex-direction: column;
+  font-family: Montserrat, sans-serif;
+  font-style: normal;
+  font-size: 19px;
+  line-height: 28px;
+  color: $Dark-Shade100;
+  margin-left: 40px;
+}
+.color__description {
+  font-weight: bold;
+}
+.color__value {
+  font-weight: normal;
+}
+

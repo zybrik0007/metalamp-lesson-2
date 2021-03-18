@@ -1,16 +1,20 @@
+html, body, h1, h2, h3, h4, h5, button, input, div, a, ul, li {
+  margin: 0;
+  padding: 0;
+}
 
-$dd:  red;
-.square {
-  width: 300px;
-  height: 300px;
-  background: $dd;
-  font-family: Montserrat;
+body {
+  background: #FFFFFF;
 }
-.type {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: 200;
-  font-size: 14px;
-  line-height: 24px;
-  color: rgba(31, 32, 65, 0.75);
+
+.colors-type {
+  margin-left: 150px;
+  left: calc(100% - 50px);
+  display: flex;
+  flex-direction: column;
+  flex-shrink: 1;
 }
+
+.square {}
+.colors {}
+.type {}

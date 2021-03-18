@@ -1,4 +1,18 @@
-.colors-type
-    .colors Colors
-
-    .type Types
+extends ../../../templates/ui-template.pug
+block content
+    .colors-type
+        .colors
+            -
+                var colorsArray = [
+                    {color: 'Dark-Shade100', description: 'Dark Shade 100%', value: '#1F2041'},
+                    {color: 'Dark-Shade75', description: 'Dark Shade 75%', value: '#1F2041'},
+                    {color: 'Dark-Shade50', description: 'Dark Shade 50%', value: '#1F2041'},
+                    {color: 'Dark-Shade25', description: 'Dark Shade 25%', value: '#1F2041'},
+                    {color: 'Dark-Shade5', description: 'Dark Shade 5%', value: '#1F2041'},
+                    {color: 'Purple', description: 'Purple', value: '#BC9CFF'},
+                    {color: 'Green', description: 'Green', value: '#6FCF97'}
+                ]
+            each objectColor in colorsArray
+                include ../../../components/colors/color
+                +color(objectColor.color, objectColor.description, objectColor.value)
+        .type
