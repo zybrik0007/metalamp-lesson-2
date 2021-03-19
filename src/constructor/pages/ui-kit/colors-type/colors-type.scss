@@ -7,14 +7,50 @@ body {
   background: #FFFFFF;
 }
 
-.colors-type {
-  margin-left: 150px;
-  left: calc(100% - 50px);
+
+.container {
+  max-width: 1920px;
   display: flex;
   flex-direction: column;
-  flex-shrink: 1;
+}
+.header {
+
 }
 
-.square {}
-.colors {}
-.type {}
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  flex-grow: 1;
+  margin-top: 145px;
+}
+
+
+.colors-type {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+}
+
+.colors {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  .colors__container {
+    max-width: 281.26px;
+    display: flex;
+    flex-direction: column;
+  }
+}
+.types {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.types__container {
+  max-width: 436px;
+}

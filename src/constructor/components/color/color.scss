@@ -1,5 +1,6 @@
 @import '../../../assets/styles/colors.scss';
 .color {
+  width: auto;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
@@ -47,6 +48,7 @@
   line-height: 28px;
   color: $Dark-Shade100;
   margin-left: 40px;
+
 }
 .color__description {
   font-weight: bold;
