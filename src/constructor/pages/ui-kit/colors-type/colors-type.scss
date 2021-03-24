@@ -1,6 +1,7 @@
-html, body, h1, h2, h3, h4, h5, button, input, div, a, ul, li {
+html, body, h1, h2, h3, h4, h5, button, input, div, a, ul, li, p {
   margin: 0;
   padding: 0;
+
 }
 
 body {
@@ -23,34 +24,49 @@ body {
   flex-direction: column;
   flex-grow: 1;
   margin-top: 145px;
+  margin-left: 149.74px;
+
 }
 
-
 .colors-type {
-  width: 100%;
+  width: 1132px;
+  height: 610px;
   display: flex;
   flex-direction: row;
   flex-wrap: nowrap;
 }
 
 .colors {
-  flex: 1;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
 
   .colors__container {
     max-width: 281.26px;
     display: flex;
     flex-direction: column;
   }
+  .colors__container > div:not(:first-child) {
+    margin-top: 20px;
+  }
 }
 .types {
-  flex: 1;
+  width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: center;
+
 }
 .types__container {
   max-width: 436px;
+  height: 321px;
+  display: flex;
+  flex-direction: column;
+  flex-wrap: nowrap;
+  margin-left: 126px;
 }
+
+.types__container > div:not(:first-child) {
+  margin-top: 52px;
+}
+
+
