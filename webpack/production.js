@@ -8,6 +8,7 @@ const MiniCssExtractPlugin = require('mini-css-extract-plugin')
 module.exports = {
     entry: {
         'colors-type': path.resolve(__dirname, '../src/constructor/pages/ui-kit/colors-type/colors-type.js'),
+        'form-elements': path.resolve(__dirname, '../src/constructor/pages/ui-kit/form-elements/form-elements.js'),
         'main': path.resolve(__dirname, '../src/main.js')
     },
     output: {
@@ -49,6 +50,11 @@ module.exports = {
             template: path.resolve(__dirname, '../src/constructor/pages/ui-kit/colors-type/colors-type.pug'),
             chunks: ['colors-type', 'main'],
             filename: 'colors-type.html'
+        }),
+        new HtmlWebpackPlugin({
+            template: path.resolve(__dirname, '../src/constructor/pages/ui-kit/form-elements/form-elements.pug'),
+            chunks: ['form-elements', 'main'],
+            filename: 'form-elements.html'
         }),
         new CleanWebpackPlugin(),
         new MiniCssExtractPlugin({

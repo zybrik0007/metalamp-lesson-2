@@ -1,0 +1,9 @@
+extends ../../../templates/ui-template.pug
+block content
+    div
+        include ../../../components/text-field/text-field
+        +text-field('Text  Field', 'Email', '')
+        include ../../../components/dropdown-people/dropdown-people
+        +dropdown-people('Text  Field', 'Email', '')
+
+
