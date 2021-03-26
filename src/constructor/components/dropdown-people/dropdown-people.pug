@@ -2,7 +2,8 @@ mixin dropdown-people(name, placeholder, value)
     .dropdown-people
         label.dropdown-people__name=name
         .dropdown-people__container
-            .dropdown-people__input
-                input(type=text placeholder=placeholder value=value).dropdown-people__value
-                button.dropdown-people__button
+            .dropdown-people__value
+                input(type=text placeholder=placeholder value=value disabled).dropdown-people__input
+                .dropdown-people__icon
+                    .material-icons expand_more
             .dropdown-people__content
