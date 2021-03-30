@@ -27,22 +27,22 @@
 }
 
 .type__text_width-H1 {
-  @include H1();
+ // @include H1();
   color: $Dark-Shade100
 }
 
 .type__text_width-H2 {
-  @include H2();
+  //@include H2();
   color: $Dark-Shade100
 }
 
 .type__text_width-H3 {
-  @include H3();
+  //@include H3();
   color: $Dark-Shade100
 }
 
 .type__text_width-Body {
-  @include Body();
+  //@include Body();
   color: $Dark-Shade75;
 }
 

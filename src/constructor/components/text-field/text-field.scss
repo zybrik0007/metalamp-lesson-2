@@ -12,7 +12,7 @@
   flex-grow: 1;
   width: 320px;
   height: 67px;
-  @include H3
+  //@include H3
 }
 
 .text-field__name:focus {
@@ -29,7 +29,7 @@
   border-radius: 4px;
   outline: none;
   color: $Dark-Shade25;
-  @include Body;
+  //@include Body;
 
 }
 

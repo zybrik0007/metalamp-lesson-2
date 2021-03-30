@@ -1,9 +1,43 @@
-mixin dropdown-people(name, placeholder, value)
-    .dropdown-people
-        label.dropdown-people__name=name
-        .dropdown-people__container
-            .dropdown-people__value
-                input(type=text placeholder=placeholder value=value disabled).dropdown-people__input
-                .dropdown-people__icon
-                    .material-icons expand_more
-            .dropdown-people__content
+mixin dropdown()
+    .dropdown.dropdown_style
+        .dropdown__container
+            .dropdown__name.dropdown__name_style
+                span Dropdown
+        form.dropdown__content
+            label.dropdown__selection-field
+                input(type='text' value='' placeholder='Сколько гостей' disabled)
+                button(type='button')
+                    span.material-icons expand_more
+            ul.dropdown__data
+                li.dropdown__list
+                    span Взрослые
+                    div
+                        button(type='button')
+                            span -
+                        input(type='text' value='0' disabled)
+                        button(type='button')
+                            span +
+                li.dropdown__list
+                    span Дети
+                    div
+                        button(type='button')
+                            span -
+                        input(type='text' value='0' disabled)
+                        button(type='button')
+                            span +
+                li.dropdown__list
+                    span Младенцы
+                    div
+                        button(type='button')
+                            span -
+                        input(type='text' value='0' disabled)
+                        button(type='button')
+                            span +
+            .dropdown__buttons
+                button(type='button') Очистить
+                button(type='submit') Применить
+
+
+
+
+

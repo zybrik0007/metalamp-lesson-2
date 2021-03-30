@@ -1,32 +1,16 @@
-@mixin H1() {
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 24px;
-  line-height: 29px;
-}
-
-@mixin H2 {
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 19px;
-  line-height: 23px;
-}
-
-@mixin H3 {
-  font-family: Montserrat;
-  font-style: normal;
-  font-weight: bold;
-  font-size: 12px;
-  line-height: 15px;
-  text-transform: uppercase;
-}
-
-@mixin Body {
-  font-family: Montserrat, sans-serif;
-  font-style: normal;
-  font-weight: normal;
-  font-size: 14px;
-  line-height: 24px;
-}
+$font-family-montserrat: Montserrat;
+$font-style-normal: normal;
+$font-weight-normal: normal;
+$font-weight-bold: bold;
+$font-size-12: 12px;
+$font-size-14: 14px;
+$font-size-18: 18px;
+$font-size-19: 19px;
+$font-size-24: 24px;
+$line-height-15: 15px;
+$line-height-18: 18px;
+$line-height-22: 22px;
+$line-height-23: 23px;
+$line-height-24: 24px;
+$line-height-29: 29px;
+$text-transform-uppercase: uppercase;
