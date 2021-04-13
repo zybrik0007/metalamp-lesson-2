@@ -3,6 +3,7 @@ const HtmlWebpackPlugin = require('html-webpack-plugin')
 const HtmlWebpackPugPlugin = require('html-webpack-pug-plugin')
 const {CleanWebpackPlugin} = require('clean-webpack-plugin')
 const MiniCssExtractPlugin = require('mini-css-extract-plugin')
+const {ProvidePlugin} = require("webpack");
 
 
 module.exports = {
@@ -70,6 +71,10 @@ module.exports = {
         new MiniCssExtractPlugin({
             filename: './css/[name].css'
         }),
+        new ProvidePlugin({
+            $: 'jquery',
+            jQuery: 'jquery'
+        })
     ],
     optimization: {
         splitChunks: {

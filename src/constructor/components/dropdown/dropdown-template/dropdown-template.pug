@@ -1,0 +1,43 @@
+mixin dropdown-template()
+    form.dropdown.dropdown_style
+        .dropdown__container-value
+            label.dropdown__name(for='name') Dropdown
+            .dropdown__value
+                .dropdown__value-text
+                    input(placeholder='Сколько гостей' id='name' disabled)
+                .dropdown__icon
+                    span.material-icons expand_more
+        .dropdown__container-settings
+            .dropdown__settings
+                ul.dropdown__settings-list
+                    li
+                        label(for='adults') Взрослые
+                        div
+                            button(type='button')
+                                span -
+                            div
+                                input(type='number', id='adults' placeholder=0 value='' disabled)
+                            button(type='button')
+                                span +
+                    li
+                        label(for='children') Дети
+                        div
+                            button(type='button')
+                                span -
+                            div
+                                input(type='number', id='children' placeholder=0 value='' disabled)
+                            button(type='button')
+                                span +
+                    li
+                        label(for='infants') Младенцы
+                        div
+                            button(type='button')
+                                span -
+                            div
+                                input(type='number', id='infants' placeholder=0 value='' disabled)
+                            button(type='button')
+                                span +
+                .dropdown__buttons
+                    div
+                        button(type='reset') Очистить
+                        button(type='submit') Применить

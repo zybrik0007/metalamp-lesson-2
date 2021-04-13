@@ -1,9 +1,9 @@
 extends ../../../templates/ui-template.pug
 block content
-    div
+    div.area
         include ../../../components/text-field/text-field
         +text-field('Text  Field', 'Email', '')
-        include ../../../components/dropdown-people/dropdown-people
-        +dropdown('Dropdown', 'Сколько гостей', '')
+        include ../../../components/dropdown/dropdown-template/dropdown-template
+        +dropdown-template()
 
 

@@ -1,0 +1,248 @@
+@import '../../../../assets/styles/colors.scss';
+@import '../../../../assets/styles/types.scss';
+$material-icons-font-path: '~material-icons/build/fonts';
+@import '~material-icons/iconfont/material-icons.css';
+
+body, span, button, ul, li, form, input, label {
+  margin: 0;
+  padding: 0;
+  outline: none;
+  list-style-type: none;
+  border: none;
+}
+
+.dropdown_style {
+  position: relative;
+  width: 84.5%;
+  height: 64.44px;
+}
+.dropdown__container-value {
+  height: 64.44px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+.dropdown__name {
+  position: relative;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #1F2041;
+  box-sizing: border-box;
+}
+.dropdown__value {
+  position: relative;
+  width: 100%;
+  height: 44px;
+  box-sizing: border-box;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-radius: 4px;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 15px;
+}
+
+.dropdown__value-text {
+  flex-grow: 1;
+}
+
+.dropdown__value-text {
+
+  input {
+    border: none;
+    outline: none;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+
+  input::placeholder {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 14px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.75);
+  }
+
+}
+
+.dropdown__icon {
+  width: 44px;
+  height: 44px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  span {
+    font-family: "Material Icons";
+    content: "\e5cf";
+    font-style: normal;
+    font-weight: normal;
+    font-size: 24px;
+    line-height: 24px;
+    color: rgba(31, 32, 65, 0.5);
+  }
+}
+
+
+.dropdown__container-settings {
+  position: absolute;
+  width: 100%;
+  height: 158px;
+  display: none;
+  background: #ffffff;
+}
+
+.dropdown__settings {
+  width: 100%;
+  height: 158px;
+  //height: 119px;
+  display: flex;
+  flex-direction: column;
+  box-sizing: border-box;
+  padding-top: 7px;
+  border: 1px solid rgba(31, 32, 65, 0.5);
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  box-shadow: 0 10px 20px rgba(31, 32, 65, 0.05);
+}
+
+.dropdown__settings-list {
+  display: flex;
+  flex-direction: column;
+  height: 102px;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  padding-left: 15px;
+  padding-right: 7px;
+
+  li {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+
+  li>label {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+  }
+
+  li>div {
+    width: 92px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: nowrap;
+    align-items: center;
+    justify-content: space-between;
+  }
+
+  li>div>button {
+    width: 30px;
+    height: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    border: 1px solid rgba(31, 32, 65, 0.25);
+    box-sizing: border-box;
+    border-radius: 22px;
+    background: #ffffff;
+  }
+
+  li>div>button>span {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: normal;
+    font-size: 18px;
+    line-height: 22px;
+    color: rgba(31, 32, 65, 0.5);
+  }
+
+  li>div>div {
+    width: 32px;
+    text-align: center;
+  }
+
+  li>div>div>input {
+    text-align: center;
+    border: none;
+    outline: none;
+    width: inherit;
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-transform: uppercase;
+    color: #1F2041;
+  }
+
+  li>div>div>input::placeholder {
+    font-family: Montserrat;
+    font-style: normal;
+    font-weight: bold;
+    font-size: 12px;
+    line-height: 15px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #1F2041;
+  }
+}
+
+.dropdown__buttons {
+  height: 50px;
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+}
+
+.dropdown__buttons>div {
+  width: 100%;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+  padding-left: 14px;
+  padding-right: 6px;
+  padding-top: 7px;
+}
+
+
+
+.dropdown__buttons>div>button {
+  border: none;
+  outline: none;
+  background: inherit;
+  font-family: Montserrat;
+  font-style: normal;
+  font-weight: bold;
+  font-size: 12px;
+  line-height: 15px;
+  text-transform: uppercase;
+  color: #BC9CFF;
+}
+
+.dropdown__buttons>div:nth-child {
+  margin-left: 14px;
+}
+
