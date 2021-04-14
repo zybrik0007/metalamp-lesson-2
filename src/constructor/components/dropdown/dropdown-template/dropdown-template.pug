@@ -1,43 +1,31 @@
-mixin dropdown-template()
+
+
+mixin dropdown-template(objDropdown)
     form.dropdown.dropdown_style
         .dropdown__container-value
-            label.dropdown__name(for='name') Dropdown
+            label.dropdown__name(for=objDropdown.idValue)=objDropdown.nameDropdown
             .dropdown__value
                 .dropdown__value-text
-                    input(placeholder='Сколько гостей' id='name' disabled)
+                    input(placeholder=objDropdown.placeholderDropdown id=objDropdown.idValue disabled)
                 .dropdown__icon
                     span.material-icons expand_more
-        .dropdown__container-settings
+        .dropdown__container-settings(style='height:' + objDropdown.heightDropdownSettings + ';' + 'display:' + objDropdown.settingsDisplay)
             .dropdown__settings
                 ul.dropdown__settings-list
-                    li
-                        label(for='adults') Взрослые
-                        div
-                            button(type='button')
-                                span -
+                    each value in objDropdown.settingsDropdown
+                        li
+                            label(for=value.idValue)=value.nameButtons
                             div
-                                input(type='number', id='adults' placeholder=0 value='' disabled)
-                            button(type='button')
-                                span +
-                    li
-                        label(for='children') Дети
+                                button(type='button' id=value.idMinus)
+                                    span -
+                                div
+                                    input(type='number', id=value.idValue value=0 data-sum=value.sum disabled)
+                                button(type='button' id=value.idPlus)
+                                    span +
+
+
+                if objDropdown.buttonsDisplay
+                    .dropdown__buttons
                         div
-                            button(type='button')
-                                span -
-                            div
-                                input(type='number', id='children' placeholder=0 value='' disabled)
-                            button(type='button')
-                                span +
-                    li
-                        label(for='infants') Младенцы
-                        div
-                            button(type='button')
-                                span -
-                            div
-                                input(type='number', id='infants' placeholder=0 value='' disabled)
-                            button(type='button')
-                                span +
-                .dropdown__buttons
-                    div
-                        button(type='reset') Очистить
-                        button(type='submit') Применить
+                            button(type='reset' id=objDropdown.buttonReset style='color: #ffffff') Очистить
+                            button(type='submit' id=objDropdown.buttonApply) Применить

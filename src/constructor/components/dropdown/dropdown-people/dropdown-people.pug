@@ -1,0 +1,16 @@
+mixin dropdown-people()
+    include ../dropdown-template/dropdown-template
+    - const objDropdown = {
+    - nameDropdown: 'Dropdown',
+    - placeholderDropdown: 'Скольколь гостей',
+    - idValue: 'people',
+    - buttonsDisplay: true,
+    - heightDropdownSettings: '158px',
+    - buttonReset: 'reset',
+    - buttonApply: 'apply',
+    - settingsDisplay: 'none',
+    - settingsDropdown: [
+    - {nameButtons: 'Взрослые', idValue: 'adults', idMinus: 'minusAdults', idPlus: 'plusAdults', sum: 'true'},
+    - {nameButtons: 'Дети', idValue: 'children', idMinus: 'minusChildren', idPlus: 'plusChildren', sum: 'true'},
+    - {nameButtons: 'Младенцы', idValue: 'infants', idMinus: 'minusInfants', idPlus: 'plusInfants', sum: 'false'}]}
+    +dropdown-template(objDropdown)

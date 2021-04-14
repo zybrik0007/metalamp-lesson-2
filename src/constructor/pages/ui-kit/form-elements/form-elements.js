@@ -1,5 +1,4 @@
 import 'normalize.css'
 import '../../../components/text-field/text-field'
-import '../../../components/dropdown/dropdown-template/dropdown-template.scss'
-import '../../../components/dropdown/dropdown-template/1.js'
+import '../../../components/dropdown/dropdown-people/dropdown-people'
 import './form-elements.scss'
