@@ -1,5 +1,6 @@
-import '../dropdown-template/dropdown-template'
+import {displayActivate} from '../dropdown-template/dropdown-template'
 import '../dropdown-template/dropdown-template.scss'
+
 
 function clickPeopleQuantity(plusId, minusId, valueId) {
     $(plusId).click(() => {
@@ -82,15 +83,27 @@ function resetButton(resetId, valueAdults, valueChildren, valueInfants, valueInp
         $(valueChildren).val(0);
         $(valueInfants).val(0);
         $(valueInput).val('');
+        $('.dropdown__container-settings').hide()
+        if($('.dropdown__value').attr('data-active') === 'true') {
+            $('.dropdown__value').attr('data-active', false)
+        } else {
+            $('.dropdown__value').attr('data-active', true)
+        }
+        displayActivate()
     })
 }
 
 function applyButton(applyId) {
-    $(applyId).click(() => {
-        console.log('dd')
-        //e.preventDefault();
+    $(applyId).click((e) => {
+        e.preventDefault();
+        e.stopImmediatePropagation();
         $('.dropdown__container-settings').hide()
-        //$('.dropdown__value').css('border-bottom-left-radius', '4px').css('border-bottom-right-radius', '4px');
+        if($('.dropdown__value').attr('data-active') === 'true') {
+            $('.dropdown__value').attr('data-active', false)
+        } else {
+            $('.dropdown__value').attr('data-active', true)
+        }
+        displayActivate()
     })
 }
 

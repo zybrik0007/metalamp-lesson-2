@@ -4,12 +4,12 @@ mixin dropdown-template(objDropdown)
     form.dropdown.dropdown_style
         .dropdown__container-value
             label.dropdown__name(for=objDropdown.idValue)=objDropdown.nameDropdown
-            .dropdown__value
+            .dropdown__value(data-active=objDropdown.settingsDisplay)
                 .dropdown__value-text
                     input(placeholder=objDropdown.placeholderDropdown id=objDropdown.idValue disabled)
                 .dropdown__icon
                     span.material-icons expand_more
-        .dropdown__container-settings(style='height:' + objDropdown.heightDropdownSettings + ';' + 'display:' + objDropdown.settingsDisplay)
+        .dropdown__container-settings(style='height:' + objDropdown.heightDropdownSettings)
             .dropdown__settings
                 ul.dropdown__settings-list
                     each value in objDropdown.settingsDropdown
